@@ -75,17 +75,4 @@ jobs:
         env:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD5 }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
-
-
-
-      - name: ' 运行 【企鹅阅读六】'
-        if: env.COOKIE_QQYD6
-        run: |
-          node qqyd.js
-        env:
-          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD5 }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
+          TG_USER_ID: ${{ secrets.TG_USER_ID}}
