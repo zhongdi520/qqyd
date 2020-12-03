@@ -22,6 +22,8 @@ jobs:
         COOKIE_QQYD3: ${{ secrets.COOKIE_QQYD3 }}
         COOKIE_QQYD4: ${{ secrets.COOKIE_QQYD4 }}
         COOKIE_QQYD5: ${{ secrets.COOKIE_QQYD5 }}
+        COOKIE_QQYD6: ${{ secrets.COOKIE_QQYD6 }}
+
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 10.x
@@ -72,3 +74,14 @@ jobs:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD5 }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
+
+
+      - name: ' 运行 【企鹅阅读六】'
+        if: env.COOKIE_QQYD56
+        run: |
+          node qqyd.js
+        env:
+          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD6 }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+
