@@ -1,3 +1,4 @@
+
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
@@ -21,8 +22,6 @@ jobs:
         COOKIE_QQYD3: ${{ secrets.COOKIE_QQYD3 }}
         COOKIE_QQYD4: ${{ secrets.COOKIE_QQYD4 }}
         COOKIE_QQYD5: ${{ secrets.COOKIE_QQYD5 }}
-    steps:
-    steps:
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 10.x
@@ -56,8 +55,7 @@ jobs:
         env:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD3 }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}          
       - name: ' 运行 【企鹅阅读四】'
         if: env.COOKIE_QQYD4
         run: |
@@ -66,7 +64,6 @@ jobs:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD4 }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
       - name: ' 运行 【企鹅阅读五】'
         if: env.COOKIE_QQYD5
         run: |
@@ -74,4 +71,4 @@ jobs:
         env:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD5 }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID}}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
