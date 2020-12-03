@@ -21,7 +21,6 @@ jobs:
         COOKIE_QQYD3: ${{ secrets.COOKIE_QQYD3 }}
         COOKIE_QQYD4: ${{ secrets.COOKIE_QQYD4 }}
         COOKIE_QQYD5: ${{ secrets.COOKIE_QQYD5 }}
-        COOKIE_QQYD6: ${{ secrets.COOKIE_QQYD6 }}
     steps:
     steps:
     steps:
