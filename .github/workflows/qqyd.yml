@@ -77,7 +77,7 @@ jobs:
 
 
       - name: ' 运行 【企鹅阅读六】'
-        if: env.COOKIE_QQYD56
+        if: env.COOKIE_QQYD6
         run: |
           node qqyd.js
         env:
